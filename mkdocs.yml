@@ -1,0 +1,70 @@
+site_name: ZeroShare
+site_url: https://zeroshare.jkbx.live/docs
+repo_url: https://github.com/jobinlawrance/zeroshare-backend
+repo_name: jobinlawrance/zeroshare-backend
+copyright: Copyright &copy; 2024 - 2025 Jobin Lawrance
+theme:
+  name: material
+  logo: assets/logo.png
+  icon: 
+    repo: fontawesome/brands/github
+  palette:
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: red
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: default
+      primary: red
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - content.code.copy
+    - content.code.select
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.sections
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      url_download: true
+      encoding: 'utf-8'
+  - pymdownx.superfences
+  - attr_list
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/JobinLawrance
+
+plugins:
+  - social
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      enabled:
+      repository: jobinlawrance/zeroshare-backend
+      branch: main
+nav:
+  - Home: index.md
+  - Self Hosting:
+    - Prerequisites:
+      - Google OAuth: 'Self Hosting/google-oauth.md'
+    - Installation:
+      - Automated Setup: 'Self Hosting/automated-installation.md'
+      - Manual Setup: 'Self Hosting/manual-setup.md'
+    - Monitoring:
+      - Jaeger (Dev Setup) : 'Self Hosting/otel-dev.md'
+      - Grafana (Prod Setup): 'Self Hosting/otel-prod.md'
