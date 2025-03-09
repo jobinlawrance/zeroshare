@@ -42,6 +42,9 @@ markdown_extensions:
       encoding: 'utf-8'
   - pymdownx.superfences
   - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 
 extra:
@@ -52,9 +55,9 @@ extra:
 plugins:
   - social
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: !ENV [CI, false]
   - git-committers:
-      enabled:
+      enabled: !ENV [CI, false]
       repository: jobinlawrance/zeroshare-backend
       branch: main
 nav:

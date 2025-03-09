@@ -100,7 +100,8 @@ This is the grafana config file which is used to configure the grafana instance.
 This is the datasource config file which is used to configure the clickhouse datasource in grafana using Clickhouse's official [Grafana Plugin](https://grafana.com/grafana/plugins/grafana-clickhouse-datasource/).
 It is located at [`otel/datasource.yaml`](https://github.com/jobinlawrance/zeroshare-backend/blob/main/otel/datasource.yaml).
 
-> As an alternative, you can also use Altinity's [Grafana Plugin for Clickhouse](https://grafana.com/grafana/plugins/vertamedia-clickhouse-datasource/) as an alternative or in tandem with the official plugin.
+!!! info
+    As an alternative, you can also use Altinity's [Grafana Plugin for Clickhouse](https://grafana.com/grafana/plugins/vertamedia-clickhouse-datasource/) as an alternative or in tandem with the official plugin.
 
 -----
 
