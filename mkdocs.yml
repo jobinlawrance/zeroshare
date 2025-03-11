@@ -6,6 +6,7 @@ copyright: Copyright &copy; 2024 - 2025 Jobin Lawrance
 theme:
   name: material
   logo: assets/logo.png
+  custom_dir: docs/overrides
   icon: 
     repo: fontawesome/brands/github
   palette:
@@ -26,10 +27,12 @@ theme:
   features:
     - content.code.copy
     - content.code.select
-    - navigation.instant
-    - navigation.instant.progress
     - navigation.path
     - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tabs
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -45,6 +48,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 
 extra:
@@ -63,6 +69,7 @@ plugins:
 nav:
   - Home: index.md
   - Self Hosting:
+    - 'Self Hosting/index.md'
     - Prerequisites:
       - Google OAuth: 'Self Hosting/google-oauth.md'
     - Installation:
