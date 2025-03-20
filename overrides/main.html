@@ -1,0 +1,13 @@
+{#-
+    This file was automatically generated - do not edit
+  -#}
+{% extends "base.html" %}
+{% block extrahead %}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/custom.css' | url }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/1.0.35/ua-parser.min.js"></script>
+{% endblock %}
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ 'assets/javascripts/custom.js' | url }}"></script>
+  <script src="{{ 'assets/javascripts/download.js' | url }}"></script>
+{% endblock %}
