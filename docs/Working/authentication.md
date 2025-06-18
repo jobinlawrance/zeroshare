@@ -6,7 +6,7 @@ This is the most detached version of the authentication flow which can be used i
 
 The client creates a UUID and redirects the user to the login URL.
 
-```http:%2F%2Flocalhost%3A4000%2Flogin%2Funique-id%60%60%60
+`http://localhost/login/unique-id`
 
 Along with the redirection, the client also subscribes to a server-side event for the same UUID.
 
