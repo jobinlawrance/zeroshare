@@ -1,0 +1,108 @@
+{#-
+    This file was automatically generated - do not edit
+  -#}
+{% extends "main.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>
+    .md-header, .md-tabs {
+      position: initial;
+      background-color: transparent;
+      box-shadow: none;
+    }
+    .md-main__inner{margin:0}
+    .md-content{display:none}
+    /* .mdx-container {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background: url("assets/background.svg") no-repeat;
+      background-size: cover;
+      background-position: center;
+    } */
+    .mdx-hero {
+      margin: 0 0.8rem;
+      color: var(--md-primary-bg-color);
+    }
+    .mdx-hero h1 {
+      margin-bottom: 1rem;
+      color: currentColor;
+      font-weight: 700
+    }
+    .mdx-hero__content {
+      padding-bottom: 6rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .mdx-hero__image{
+      text-align: center;
+    }
+    .mdx-hero__image img {
+      max-width: 600px;
+      height: auto;
+    }
+    @media screen and (min-width:60em){.md-sidebar--secondary{display:none}}
+    @media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .platform-icon {
+      margin-right: 0.5rem;
+    }
+    /* Hide theme switcher on home page */
+    .md-header__option {
+      display: none;
+    }
+</style>
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__image">
+          <img src="assets/mesh.png" alt="ZeroShare Logo" draggable="false">
+        </div>
+        <div class="mdx-hero__content">
+          <h1>P2P File Sharing using Nebula's Mesh Network</h1>
+          <p>OpenSource peer to peer cross-platform file sharing application without hosting files on a central server.</p>
+          <div class="download-buttons">
+            <a href="#" class="md-button md-button--primary" id="download-button">
+              <span class="twemoji">
+                {% include ".icons/fontawesome/solid/download.svg" %}
+              </span>
+              <span id="download-text">Download</span>
+            </a>
+            <a href="{{ config.repo_url }}" title="Go to repository" class="md-button">
+              <span class="twemoji">
+                {% include ".icons/fontawesome/brands/github.svg" %}
+              </span>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
+
+<style>
+  .md-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem;
+  }
+  .twemoji {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+  .twemoji svg {
+    height: 1.2em;
+    width: 1.2em;
+  }
+  .platform-button[data-os="mac"] {
+    white-space: nowrap;
+  }
+</style>
